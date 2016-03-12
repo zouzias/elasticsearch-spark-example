@@ -21,3 +21,9 @@ libraryDependencies ++= Seq(
   "org.apache.spark"  		%% "spark-sql"              % sparkVersion % "provided" exclude("org.spark-project.spark", "unused"),
   "org.scalatest"     		%% "scalatest"              % "2.2.5" % "test"
 )
+
+// Elasticsearch *copies* joda-time code and patch it into their codebase. It causes several issues
+// see https://www.elastic.co/blog/to-shade-or-not-to-shade
+assemblyShadeRules in assembly := Seq(
+  ShadeRule.rename("org.joda.time.base.**" -> "org.elasticsearch.joda.time.@1").inLibrary("org.elasticsearch" % "elasticsearch" % ElasticV).inProject
+)
