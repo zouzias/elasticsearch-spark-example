@@ -1,5 +1,7 @@
 language: scala
 scala:
    - 2.11.11
-script: ./build.sh
+script:
+   -  ./1.x/build.sh
+   -  ./2.x/build.sh
 
