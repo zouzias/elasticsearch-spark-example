@@ -15,7 +15,7 @@ val ElasticV = "2.4.5"
 libraryDependencies ++= Seq(
   "com.sksamuel.elastic4s" 	%% "elastic4s-core"    	  % "2.4.0" exclude("org.elasticsearch", "elasticsearch"),
   "org.elasticsearch" 		% "elasticsearch"           % ElasticV,
-  "org.elasticsearch" 		%% "elasticsearch-spark"    % "2.4.4" % "provided",
+  "org.elasticsearch" 		%% "elasticsearch-spark-20" % "5.4.0" % "provided", // Provided is important here for assembly
   "com.typesafe"      		% "config"                  % "1.2.1",
   "org.apache.spark"  		%% "spark-core"             % sparkVersion % "provided" exclude("org.spark-project.spark", "unused"),
   "org.apache.spark"  		%% "spark-sql"              % sparkVersion % "provided" exclude("org.spark-project.spark", "unused"),
