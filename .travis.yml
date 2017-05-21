@@ -3,5 +3,6 @@ scala:
    - 2.11.11
 script:
    -  ./2.x/build.sh
+   -  ./5.x/build.sh
    -  ./1.x/build.sh
 
