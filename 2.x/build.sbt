@@ -19,7 +19,7 @@ libraryDependencies ++= Seq(
   "com.typesafe"      		% "config"                  % "1.2.1",
   "org.apache.spark"  		%% "spark-core"             % sparkVersion % "provided" exclude("org.spark-project.spark", "unused"),
   "org.apache.spark"  		%% "spark-sql"              % sparkVersion % "provided" exclude("org.spark-project.spark", "unused"),
-  "org.scalatest"     		%% "scalatest"              % "2.2.6" % "test"
+  "org.scalatest"     		%% "scalatest"              % "3.0.3" % "test"
 )
 
 // Elasticsearch *copies* joda-time code and patch it into their codebase. It causes several issues
