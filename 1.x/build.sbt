@@ -4,12 +4,12 @@ version := "0.1.0"
 
 organization := "org.zouzias"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.11.8"
 
-crossScalaVersions := Seq("2.11.7")
+crossScalaVersions := Seq("2.11.8")
 
 // Versions
-val sparkVersion = "1.5.1"
+val sparkVersion = "1.6.3"
 val ElasticV = "1.7.4"
 
 libraryDependencies ++= Seq(
