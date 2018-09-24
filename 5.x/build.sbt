@@ -9,13 +9,13 @@ scalaVersion := "2.11.12"
 crossScalaVersions := Seq("2.11.12")
 
 // Versions
-val sparkVersion = "2.1.2"
-val ElasticV = "5.6.5"
+val sparkVersion = "2.1.3"
+val ElasticV = "5.6.12"
 
 libraryDependencies ++= Seq(
-  "com.sksamuel.elastic4s" 	%% "elastic4s-core"    	  % "5.6.1" exclude("org.elasticsearch", "elasticsearch"),
+  "com.sksamuel.elastic4s" 	%% "elastic4s-core"    	  % "5.6.7" exclude("org.elasticsearch", "elasticsearch"),
   "org.elasticsearch" 		% "elasticsearch"           % ElasticV,
-  "org.elasticsearch" 		%% "elasticsearch-spark-20" % "5.6.5" % "provided", // Provided is important here for assembly
+  "org.elasticsearch" 		%% "elasticsearch-spark-20" % "5.6.12" % "provided", // Provided is important here for assembly
   "com.typesafe"      		% "config"                  % "1.2.1",
   "org.apache.spark"  		%% "spark-core"             % sparkVersion % "provided" exclude("org.spark-project.spark", "unused"),
   "org.apache.spark"  		%% "spark-sql"              % sparkVersion % "provided" exclude("org.spark-project.spark", "unused"),
