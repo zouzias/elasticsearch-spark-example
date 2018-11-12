@@ -9,7 +9,7 @@ scalaVersion := "2.11.12"
 crossScalaVersions := Seq("2.11.12")
 
 // Versions
-val sparkVersion = "2.1.2"
+val sparkVersion = "2.3.1"
 val ElasticV = "2.4.6"
 
 libraryDependencies ++= Seq(
